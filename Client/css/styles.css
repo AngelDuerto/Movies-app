@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(188, 217, 226);
+    color: #333;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #222;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#searchInput{
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fbfbfb;
+}
+
+#submitBtn,
+#resetBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: lightblue;
+    color: rgb(23, 57, 69);
+}
+
+#submitBtn:hover,
+#resetBtn:hover {
+    background-color: rgb(98, 179, 206);
+}
+
+.resultContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.resultContainer div{
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.resultContainer img{
+    max-width: 100%;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.movieTitle{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.movieDate{
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.movieOverview{
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.5;
+    padding: 10px;
+}

@@ -11,6 +11,12 @@ body{
     margin: 0 auto;
 }
 
+.mainTitle{
+    text-align: center;
+    font-size: 70px;
+}
+
+
 form {
     display: flex;
     justify-content: center;

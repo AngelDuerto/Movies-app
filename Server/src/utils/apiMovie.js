@@ -1,4 +1,4 @@
-fe
+
 const request = require("request")
 
 //Fetch movie data from an external API

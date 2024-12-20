@@ -7,11 +7,11 @@ const getMovie = require("./utils/apiMovie")
 const port = process.env.PORT || 3000;
 
 //Serve static files
-app.use(express.static(path.join(__dirname, "../Client")));
+app.use(express.static(path.join(__dirname, "../../Client")));
 
 //Define the route for root URL
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../Client/index.html"));
+    res.sendFile(path.join(__dirname, "../../Client/index.html"));
 });
 app.get("/movie", (req, res) => {
     if (!req.query.search) {

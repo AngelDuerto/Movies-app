@@ -23,10 +23,15 @@ async function getMovie(movieName) {
 }
 //Add a submit event listener to the form
 formElm.addEventListener("submit", async (event) => {
-    event.preventDefault(); //Prevent default submission 
+    event.preventDefault(); //Prevent default submission
+
+    //Clear previous search results and shows loading text
+    resultContainer.innerHTML = "<p>Loading...<p>";
+
     //Fetch movie data based on the search input value
     const data = await getMovie(searchInput.value);
 
+    resultContainer.innerHTML = ""
     // console.log(data.body.results); check results on console
     //Iterate over the list of movies in the response 
     data.body.results.forEach((movie) => { 
@@ -40,9 +45,11 @@ formElm.addEventListener("submit", async (event) => {
             </div>
         `;
     });
+    // clear input field after submission
+    searchInput.value = ""; 
 });
 
-//Add a click event listener to reset button
+// Add a click event listener to reset button to h1
 resetBtn.addEventListener("click", function () {
     searchInput.value = "";
     resultContainer.innerHTML = "";

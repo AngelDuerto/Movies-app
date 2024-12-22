@@ -4,16 +4,32 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(188, 217, 226);
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .main-content{
     flex-grow: 1;
-    margin: 0 auto;
 }
 
 .mainTitle{
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    width: 350px;
     text-align: center;
     font-size: 70px;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 0px;
+    text-underline-offset: 15px;
+    transition: text-decoration-thickness 0.3s ease, text-underline-offset 0.3s ease;
+}
+
+.mainTitle:hover{
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
 }
 
 
@@ -38,8 +54,7 @@ form {
     background-color: #fbfbfb;
 }
 
-#submitBtn,
-#resetBtn {
+#submitBtn{
     font-size: 1rem;
     padding: 15px 30px;
     border: none;
@@ -49,8 +64,7 @@ form {
     color: rgb(23, 57, 69);
 }
 
-#submitBtn:hover,
-#resetBtn:hover {
+#submitBtn:hover{
     background-color: rgb(98, 179, 206);
 }
 
@@ -67,6 +81,11 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 1.5s ease;
+}
+
+.resultContainer div:hover{
+    transform: scale(1.03);
 }
 
 .resultContainer img{
@@ -75,6 +94,11 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #333;
+    transition: transform 1.5s ease;
+}
+
+.resultContainer img:hover{
+    transform: scale(1.02);
 }
 
 .movieTitle{
@@ -82,7 +106,7 @@ form {
     font-weight: bold;
     margin: 10px 0 5px;
     padding-bottom: 5px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #8a8a8a;
 }
 
 .movieDate{
@@ -98,6 +122,13 @@ form {
     padding: 10px;
 }
 
+footer{
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
 
 /* Responsive design */
 @media (max-width: 1440px){
@@ -123,8 +154,7 @@ form {
 
 @media (max-width: 350px) {
 #searchInput,
-#submitBtn,
-#resetBtn {
+#submitBtn{
     padding: 12px;
 }
 }
